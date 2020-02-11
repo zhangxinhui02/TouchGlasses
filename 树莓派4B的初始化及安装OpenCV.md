@@ -59,7 +59,6 @@ deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main
 ```
 
 <br/>
-<br/>
 
 进行更新：
 
@@ -68,7 +67,7 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-<br/><br/>
+<br/>
 
 树莓派内部设置：
 
@@ -165,7 +164,7 @@ cv2.__version__
 ### 基于Python3的OpenCV
 **注：建议先安装此部分再进行其他操作。**<br/><br/>
 安装前先保证已经扩展了文件系统，见树莓派初始化。<br/><br/>
-输入下面的命令修改数据交互区防止卡死：<br/><br/>
+输入下面的命令修改数据交互区防止卡死：<br/>
 ```
 sudo nano /etc/dphys-swapfile
 ```
@@ -276,13 +275,29 @@ char* str = PyString_AsString(obj);
 char* str = (char*)PyString_AsString(obj);
 ```
 
-继续输入make编译，应该不会再有问题了。如果仍然有报错，注意看报错内容再想办法解决。<br/>
+继续输入make编译，应该不会再有问题了。如果仍然有报错，注意看报错内容再想办法解决。<br/><br/><br/>
 make命令执行完成后执行下面的命令安装。需要一分钟左右。
 
 ```
 sudo make install
 ```
 
+安装完成后将数据交互区改回去：
+```
+sudo nano /etc/dphys-swapfile
+```
+<br/>
+
+将`CONF_SWAPSIZE`修改为：<br/>
+```
+CONF_SWAPSIZE=100
+```
+<br/>
+
+输入下面的命令重启服务：<br/>
+```
+sudo /etc/init.d/dphys-swapfile stop && sudo /etc/init.d/dphys-swapfile start
+```
 <br/><br/>
 这样安装基于Python3的OpenCV就完成了。<br/>
 在命令行输入`python3`，运行下面的代码测试安装情况：
