@@ -1,5 +1,6 @@
-树莓派买来后折腾了好久才摸索熟悉Linux，为了完成这个项目又安装OpenCV，满满的都是坑，参考了子豪兄（特别感谢他的教程）和其他人的教程，但是都各有问题。这里把我摸索出的树莓派4B初始化及安装OpenCV的经验记录下方便查阅。<br/>
+﻿树莓派买来后折腾了好久才摸索熟悉Linux，为了完成这个项目又安装OpenCV，满满的都是坑，参考了子豪兄（特别感谢他的教程）和其他人的教程，但是都各有问题。这里把我摸索出的树莓派4B初始化及安装OpenCV的经验记录下方便查阅。<br/>
 注：为了防止出现各种莫名其妙的问题，可以优先选择安装基于Python3的OpenCV，然后再初始配置树莓派及安装Python2的OpenCV。<br/>
+**特别注意：本教程仅适用于树莓派4B！！！**<br/>
 参考了以下页面：<br/>
 - [树莓派开机教程](https://github.com/TommyZihao/Zihao-Blog/blob/master/01%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BC%80%E6%9C%BA%E6%95%99%E7%A8%8B.md)
 - [一劳永逸配置树莓派](https://github.com/TommyZihao/Zihao-Blog/blob/master/02%E4%B8%80%E5%8A%B3%E6%B0%B8%E9%80%B8%E9%85%8D%E7%BD%AE%E6%A0%91%E8%8E%93%E6%B4%BE.md)
