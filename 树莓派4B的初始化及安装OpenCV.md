@@ -16,8 +16,7 @@
 开机后先给pip换源：<br/>
 ```
 sudo mkdir ~/.pip
-ls .pip
-sudo nano pip.conf
+sudo nano ~/.pip/pip.conf
 ```
 修改为：
 ```
